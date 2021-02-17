@@ -132,9 +132,10 @@ class _MyHomePageState extends State<MyHomePage> {
     //อ่านข้อมูลจาก barcode และ qrcode
     String cameraScanResult = await scanner.scan();
     setState(() {
-      scanresult = cameraScanResult;
+      scanresult =
+          cameraScanResult; //นำข้อมูลที่อ่า่นเก็บใน state  และนำข้อมูลโช
     });
-
+    //ตรวจสอบว่ามาจากลิ้งอะไร
     if (scanresult.contains("line.me")) {
       checkLineURL = true;
     } else if (scanresult.contains("facebook.com")) {
